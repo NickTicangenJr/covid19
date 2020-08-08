@@ -21,8 +21,8 @@ class Covid extends Component {
      }
     
     
-    apiNews = "http://newsapi.org/v2/top-headlines?country=ph&category=health&apiKey=e9226b45038a44e88a16899f0c28b3ea";
-    apiCovid = "http://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv";
+    apiNews = "https://newsapi.org/v2/top-headlines?country=ph&category=health&apiKey=e9226b45038a44e88a16899f0c28b3ea";
+    apiCovid = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv";
     async componentDidMount(){
             const responseCovid = await axios.get(this.apiCovid);
             const rows = responseCovid.data.split('\n');
