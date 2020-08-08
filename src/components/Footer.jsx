@@ -9,14 +9,14 @@ class Footer extends Component {
             <div className="Container-Footer">
                 <div className="Container-Reference">
                     References:
-                    <a href="https://github.com/CSSEGISandData/COVID-19"> Johns Hopkins University </a>-
-                    <a href="https://newsapi.org/s/philippines-health-news-api"> newsapi.org</a>
+                    <a href="http://github.com/CSSEGISandData/COVID-19"> Johns Hopkins University </a>-
+                    <a href="http://newsapi.org/s/philippines-health-news-api"> newsapi.org</a>
                 </div>
 
                 <div className="Container-Social">
-                    <a href="https://www.facebook.com/nick.killipticangen" style={{color: '#eee'}}><FaFacebookF /></a>
-                    <a href="https://www.instagram.com/nickkillip11/" style={{color: '#eee'}}><IoLogoInstagram /></a>
-                    <a href="https://github.com/NickTicangenJr/" style={{color: '#eee'}}><AiFillGithub /></a>
+                    <a href="http://www.facebook.com/nick.killipticangen" style={{color: '#eee'}}><FaFacebookF /></a>
+                    <a href="http://www.instagram.com/nickkillip11/" style={{color: '#eee'}}><IoLogoInstagram /></a>
+                    <a href="http://github.com/NickTicangenJr/" style={{color: '#eee'}}><AiFillGithub /></a>
                 </div>
 
                 <div className="Separator"></div>
