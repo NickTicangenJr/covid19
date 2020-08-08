@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Covid from './components/Covid';
+import Footer from './components/Footer';
+import { GiVirus } from 'react-icons/gi';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="Layout">
+        <nav className="navbar">
+          <a className="navbar-brand" href="/">
+          <GiVirus /> CORONA VIRUS DASHBOARD
+          </a>
+        </nav>
+          <Covid />
+        <div className="footer">
+          <Footer />
+        </div>
+      </div>
   );
 }
 
