@@ -172,7 +172,7 @@ class Covid extends Component {
                                     <span className="Card-Header">INFECTED</span>
                                 <Typography style={{fontWeight: 'bold', color: '#F6F6F6'}}>
                                     <h4>
-                                        <CountUp start={0} end={allCountryTotal} duration={3} separator={","} />
+                                        <CountUp start={0} end={allCountryTotal} duration={5} separator={","} />
                                     </h4>
                                     <hr style={{borderTop: "2px solid rgba(255,102,0,0.8)"}}/>
                                 </Typography>
@@ -181,7 +181,7 @@ class Covid extends Component {
                                 <span className="Card-Header">RECOVERED</span>
                                 <Typography style={{fontWeight: 'bold', color: '#F6F6F6'}}>
                                     <h4>
-                                        <CountUp start={0} end={allCountryTotalRecoveries} duration={3} separator={","} />
+                                        <CountUp start={0} end={allCountryTotalRecoveries} duration={5} separator={","} />
                                     </h4>
                                     <hr style={{borderTop: "2px solid rgba(102,255,102,0.8)"}}/>
                                 </Typography>
@@ -190,7 +190,7 @@ class Covid extends Component {
                                 <span className="Card-Header">ACTIVE CASES</span>
                                 <Typography style={{fontWeight: 'bold', color: '#F6F6F6'}}>
                                     <h4>
-                                        <CountUp start={0} end={allCountryTotalActiveCases} duration={3} separator={","} />
+                                        <CountUp start={0} end={allCountryTotalActiveCases} duration={5} separator={","} />
                                     </h4>
                                     <hr style={{borderTop: "2px solid rgba(51,153,153,0.8)"}}/>
                                 </Typography>
@@ -199,7 +199,7 @@ class Covid extends Component {
                                 <span className="Card-Header">DEATHS</span>
                                 <Typography style={{fontWeight: 'bold', color: '#F6F6F6'}}>
                                     <h4>
-                                        <CountUp start={0} end={allCountryTotalDeaths} duration={3} separator={","} />
+                                        <CountUp start={0} end={allCountryTotalDeaths} duration={5} separator={","} />
                                     </h4>
                                     <hr style={{borderTop: "2px solid rgba(153,0,0,0.8)"}}/>
                                 </Typography>
