@@ -81,6 +81,15 @@ margin-bottom: 5em;
 width: 100%;
 }
 /* News=============News=============News=============News============= */
+/* Card Global=============Card Global=============Card Global=============Card Global============= */
+.Container-Card{
+width: 100%;
+margin-top: 1rem;
+margin-bottom: 5rem;
+}
+.Container-Chart{
+margin-bottom: 5em;
+}
 .Container-News-Header{
 width: 100%;
 margin-bottom: 5rem;
@@ -143,8 +152,22 @@ font-size: x-large;
 justify-content: space-evenly;
 display: flex;
 }
-
-
+.Separator{
+margin-top: 1rem;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 2px solid rgb(64, 71, 73);
+border-radius: 0 1rem;
+height: auto;
+width: 80%;
+}
+.Container-Social{
+width: 20%;
+margin-top: 1rem;
+font-size: x-large;
+justify-content: space-evenly;
+display: flex;
+}
 
 /* Media quiries */
 
@@ -260,6 +283,24 @@ display: flex;
     font-size: small;
     margin: auto;
   }
+  .Container-News{
+    height: 350px;
+  }
+  .Scrollable{
+    height: 400px;
+  }
+  .table{
+    font-size: x-small;
+  }
+  /* Footer=====Footer=====Footer=====Footer */
+  .Container-Footer{
+    width: 95%;
+  }
+  .Container-Reference{
+    width: 100%;
+    font-size: small;
+    margin: auto;
+  }
   .Container-Social{
     margin-left: auto;
     margin-right: auto;
@@ -268,6 +309,7 @@ display: flex;
   }
 
 }
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px){
 .Covid-Container{
