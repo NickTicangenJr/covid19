@@ -5,10 +5,13 @@ import {Card, Typography, CardContent } from '@material-ui/core';
 import CountUp from 'react-countup';
 import Chart from './Chart';
 import TableLoading from './TableLoading';
+import News from './News';
+import Loading from './Loading';
 
 
 class Covid extends Component {
     state = { 
+        getresult: [],
         newsStatus: [],
         countries: [],
         articles: [],
@@ -18,13 +21,16 @@ class Covid extends Component {
         allCountryTotalActiveCases: 0
      }
     
-    
+    apiNews = 'https://api.breakingapi.com/news?type=headlines&category=country&locale=en-PH&output=json&api_key=1AC0CFE01D264AA3B0C34E745C86E5AE';
     apiCovid = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv';
     async componentDidMount(){
             const responseCovid = await axios.get(this.apiCovid);
             const rows = responseCovid.data.split('\n');
 
-
+            const responseNews = await axios.get(this.apiNews);
+            const getnews = responseNews.data.articles;
+            const getresult = responseNews.data.request_metadata.total_results;
+            const gettime = responseNews.data.request_metadata.processed_at;
 
             const countries = [];
 
@@ -61,6 +67,9 @@ class Covid extends Component {
                 }
             }
             this.setState({
+                gettime: gettime,
+                getresult: getresult,
+                articles: getnews,
                 countries: countries,
                 allCountryTotal: allCountryTotal,
                 allCountryTotalDeaths: allCountryTotalDeaths,
@@ -146,12 +155,16 @@ class Covid extends Component {
 
 
     render() { 
-        const {countries,
+        const {
+            getresult,
+            articles,
+            countries,
             allCountryTotal,
             allCountryTotalDeaths,
             allCountryTotalRecoveries,
             allCountryTotalActiveCases,
             allTimeUpdated,
+            gettime
         } = this.state;
         return ( 
         <div className="Covid-Container">
@@ -205,6 +218,13 @@ class Covid extends Component {
                             </CardContent>
                         </Card>
                         </div>
+
+                        {Number(getresult) === 0 ?
+                        <Loading /> :
+                        <News 
+                            articles={articles}
+                            gettime={gettime}
+                        />}
                     
             </div>
                     <div className="Container-Chart">
