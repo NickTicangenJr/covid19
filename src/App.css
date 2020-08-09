@@ -60,7 +60,6 @@ border-radius: 1rem 1rem 0 0;
 text-align: center;
 margin-left: 1rem;
 margin-right: 1rem;
-margin-top: 1rem;
 }
 /* Table=====Table=====Table=====Table=====Table=====Table===== */
 .Scrollable{
@@ -81,6 +80,24 @@ margin-bottom: 5em;
 width: 100%;
 }
 /* News=============News=============News=============News============= */
+.Container-News-Header{
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.Container-News{
+  background: #D3CCE3;
+  background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
+  background: linear-gradient(to right, #E9E4F0, #D3CCE3);
+  overflow: scroll;
+  height: 415px;
+}
+.News-Header{
+  background: transparent;
+  color: #F6F6F6;
+  padding: 1rem 2rem;
+  border:  1px solid grey;
+  border-radius: 1rem 1rem 0 0;
+}
 /* Card Global=============Card Global=============Card Global=============Card Global============= */
 .Container-Card{
 width: 100%;
