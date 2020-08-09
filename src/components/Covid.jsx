@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-//import Loading from './Loading';
 import axios from 'axios';
 import CountryTable from './CountryTable';
 import {Card, Typography, CardContent } from '@material-ui/core';
 import CountUp from 'react-countup';
 import Chart from './Chart';
-//import News from './News';
 import TableLoading from './TableLoading';
 
 
@@ -21,15 +19,11 @@ class Covid extends Component {
      }
     
     
-    //apiNews = 'https://newsapi.org/v2/top-headlines?country=ph&category=health&apiKey=e9226b45038a44e88a16899f0c28b3ea';
     apiCovid = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv';
     async componentDidMount(){
             const responseCovid = await axios.get(this.apiCovid);
             const rows = responseCovid.data.split('\n');
 
-            // const responseNews = await axios.get(this.apiNews);
-            // const getnews = responseNews.data.articles;
-            // const getstatus = responseNews.data.totalResults;
 
 
             const countries = [];
@@ -67,9 +61,7 @@ class Covid extends Component {
                 }
             }
             this.setState({
-                //newsStatus: getstatus,
                 countries: countries,
-                //articles: getnews,
                 allCountryTotal: allCountryTotal,
                 allCountryTotalDeaths: allCountryTotalDeaths,
                 allCountryTotalRecoveries: allCountryTotalRecoveries,
@@ -155,8 +147,6 @@ class Covid extends Component {
 
     render() { 
         const {countries,
-            //newsStatus,
-           // articles,
             allCountryTotal,
             allCountryTotalDeaths,
             allCountryTotalRecoveries,
@@ -216,11 +206,6 @@ class Covid extends Component {
                         </Card>
                         </div>
                     
-                        {/* {
-                            Number(newsStatus) === 0 ?
-                            <Loading /> :
-                            <News articles={articles} />
-                        } */}
             </div>
                     <div className="Container-Chart">
                     <Chart
