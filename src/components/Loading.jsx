@@ -29,6 +29,8 @@ const Loading = () => {
                             <Skeleton />
                             <Skeleton />
                             <Skeleton />
+                            <Skeleton variant="circle" width={40} height={40} />
+                            <Skeleton />
                             <Skeleton />
                             <Skeleton />
                             <Skeleton />
