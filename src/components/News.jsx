@@ -5,7 +5,7 @@ import {TiNews} from 'react-icons/ti';
 
 class News extends Component{
     render(){
-        const {articles} = this.props;
+        const {articles, gettime} = this.props;
         return(
                 <div className="Container-News-Header">
                     <div className="News-Header">
@@ -15,13 +15,13 @@ class News extends Component{
                     </div>
                     <div className="Container-News">
                     {articles.map(article => (
-                        <List key={article.url}>
+                        <List key={article.link}>
                             <ListItem alignItems="flex-start">
                             <ListItemAvatar>
-                                    <Avatar alt="url_Image" src={article.urlToImage} />
+                                    <Avatar alt="url_Image" src={article.primary_image_link} />
                             </ListItemAvatar>
                             <ListItemText
-                                primary={<a href={article.url}><b>{article.title}</b></a>}
+                                primary={<a href={article.link}><b>{article.title}</b></a>}
                                 secondary={
                                 <React.Fragment>
                                     <Typography
@@ -29,9 +29,10 @@ class News extends Component{
                                     variant="body2"
                                     color="textPrimary"
                                     >
-                                    {"Publised: "+new Date(article.publishedAt).toLocaleDateString()}<br />                                    {article.author == null ? "" : "-"+article.author+" "}
+                                    {"Publised: "+new Date(gettime).toLocaleDateString()}<br />                                    
+                                    {article.author == null ? "" : "-"+article.authors+" "}
                                     </Typography>
-                                    {article.description == null ? "" : article.description}
+                                    {article.snippet == null ? "" : article.snippet}
                                 </React.Fragment>
                                 }
                             />
