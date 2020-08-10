@@ -10,7 +10,7 @@ class Footer extends Component {
                 <div className="Container-Reference">
                     References:
                     <a href="http://github.com/CSSEGISandData/COVID-19"> Johns Hopkins University </a>-
-                    <a href="http://newsapi.org/s/philippines-health-news-api"> newsapi.org</a>
+                    <a href="http://breakingapi.com/"> breakingapi.com</a>
                 </div>
 
                 <div className="Container-Social">
